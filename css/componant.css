@@ -1,0 +1,235 @@
+/*------------------------------------------------------------------
+
+[COMPONANT]
+
+	01. RADIO + CHECKBOX
+	
+		
+-------------------------------------------------------------------*/
+
+
+
+
+/*------------------------------------------------------------------
+
+[COMPONANT]
+
+	01. RADIO + CHECKBOX
+	
+		
+-------------------------------------------------------------------*/
+
+
+
+
+
+.checkbox label:after, .radio label:after {
+	content: '';
+	display: table;
+	clear: both;
+	padding-left:0;
+	vertical-align:top;
+}
+.checkbox .cr, .radio .cr {
+	position: relative;
+	display: inline-block;
+	border: 1px solid #eaeaea;
+	width: 22px;
+	height: 22px;
+	float: left;
+	margin-right: 0.6em;
+	border-radius:0;
+}
+.radio .cr {
+	border-radius: 50%;
+}
+.checkbox .cr .cr-icon, .radio .cr .cr-icon {
+	position: absolute;
+	font-size:0.9em;
+	line-height: 0;
+	top: 50%;
+	left: 21%;
+	color:#333
+}
+.radio .cr .cr-icon {
+	margin-left: 0.04em;
+}
+.checkbox label input[type="checkbox"], .radio label input[type="radio"] {
+	display: none;
+}
+.checkbox label input[type="checkbox"] + .cr > .cr-icon, .radio label input[type="radio"] + .cr > .cr-icon {
+	transform: scale(3) rotateZ(-20deg);
+	opacity: 0;
+}
+.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon, .radio label input[type="radio"]:checked + .cr > .cr-icon {
+	transform: scale(1) rotateZ(0deg);
+	opacity: 1;
+}
+.checkbox label input[type="checkbox"]:disabled + .cr, .radio label input[type="radio"]:disabled + .cr {
+	opacity: .5;
+}
+.customSelect {
+	cursor:pointer
+}
+.select-style {
+	padding:0 0;
+	margin: 0;
+	border: solid 1px #dfe3e3;
+	font-size:13px;
+	box-shadow:none;
+	border-radius: 1px;
+	overflow: hidden;
+	background-color: #fff;
+	position:relative;
+	color:#4d4d4d;
+	font-weight:300;
+	background:transparent
+}
+.select-style:after {
+	position:absolute;
+	top:7px;
+	right:15px;
+	font-size:17px;
+	content:"\f0d7";
+	color:#686161;
+	font-family: 'FontAwesome';
+}
+.select-style select {
+	padding: 4px 15px;
+	width: 100%;
+	border: none;
+	box-shadow: none;
+	background-color: transparent;
+	background-image: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	font-size:14px;
+	height:38px;
+	text-align:left;
+}
+.select-style select:focus {
+	outline: none;
+}
+.select-style2 {
+	padding:0 2px;
+	margin: 0;
+	border: solid 0 #e3e3e3;
+	font-size:13px;
+	box-shadow:none;
+	border-radius: 1px;
+	overflow: hidden;
+	background-color: transparent;
+	position:relative;
+	color:#fff;
+	font-weight:300;
+}
+.select-style2:after {
+	position:absolute;
+	top:2px;
+	right:15px;
+	font-size:17px;
+	content:"\f107";
+	color:#ac914a;
+	font-family: 'FontAwesome';
+}
+.select-style2 select {
+	padding: 0 0;
+	width: 100%;
+	border: none;
+	box-shadow: none;
+	background-color: transparent;
+	background-image: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	font-size:14px;
+	height:25px;
+	text-align:left;
+	color:#fff;
+	letter-spacing:2px;
+}
+.select-style2 select:focus {
+	outline: none;
+}
+ul.treatment {
+	width: 100%;
+	max-width: 100%;
+	background: #FFF;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	margin:0
+}
+ul.treatment .link {
+	cursor: pointer;
+	display: block;
+	padding: 15px 55px 15px 30px;
+	color: #555563;
+	font-size: 12px;
+	font-weight:700;
+	border-bottom: 1px solid #d5dce6;
+	margin: -1px 0 0 0;
+	position: relative;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+	text-transform:uppercase;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing:1px;
+}
+ul.treatment .link:hover {
+	background:#c61457;
+	color:#fff
+}
+ul.treatment .link:hover i {
+	color:#fff
+}
+ul.treatment li i {
+	position: absolute;
+	text-align:center;
+	line-height:25px;
+	border-radius:50%;
+	top: 12px;
+	left: 30px;
+	font-size: 17px;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+ul.treatment li i.fa-angle-down {
+	right: 42px;
+	left: auto;
+	font-size: 15px;
+	color: #ac914a;
+}
+ul.treatment li.open i.fa-angle-down {
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+ul.treatment p {
+	font-size:16px;
+	font-weight:300;
+	line-height:26px;
+}
+/**
+ * Submenu
+ -----------------------------*/
+
+
+ul.treatment .submenu {
+	display: none;
+	background: #fff;
+	border-left: solid 0 #ccc;
+	border-right: solid 0 #ccc;
+	border-bottom: 1px solid #d5dce6;
+}
+ul.treatment .submenu-active {
+	display:block;
+	background: #fff;
+	border-left: solid 0 #ccc;
+	border-right: solid 0 #ccc;
+	border-bottom: 1px solid #d5dce6;
+}
